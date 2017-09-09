@@ -10,7 +10,7 @@ rm -rf mods/
 
 # javac -d $MY_APP2_FOLDER \
 #         src/com.mysecond.app/module-info.java \
-#         src/com.mysecond.app/com/mysecond/app/MyData.java
+#         src/com.mysecond.app/com/mysecond/app/exported/MyData.java
 
 # javac --module-path mods \
 #       -d $MY_APP1_FOLDER \
