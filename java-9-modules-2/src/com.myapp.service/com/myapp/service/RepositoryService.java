@@ -2,16 +2,18 @@ package com.myapp.service;
 
 import java.util.Iterator;
 import java.util.ServiceLoader;
+import com.myapp.service.provider.RepositoryProvider;
 
 public class RepositoryService {
 
     public static Repository getRepository() {
-        ServiceLoader<Repository> sl = ServiceLoader.load(Repository.class);
-        Iterator<Repository> iter = sl.iterator();
+        final ServiceLoader<RepositoryProvider> sl = ServiceLoader.load(RepositoryProvider.class);
+        final Iterator<RepositoryProvider> iter = sl.iterator();
         if (!iter.hasNext()) {
             throw new RuntimeException("No repository found!");
         }
-        return iter.next();
+        final RepositoryProvider provider = iter.next();
+        return provider.get();
     }
 
 }

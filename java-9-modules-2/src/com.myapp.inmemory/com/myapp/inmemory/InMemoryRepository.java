@@ -1,4 +1,4 @@
-package com.myapp.provider;
+package com.myapp.inmemory;
 
 import java.util.Map;
 import com.myapp.service.Repository;
