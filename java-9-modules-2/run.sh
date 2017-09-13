@@ -2,5 +2,6 @@
 
 set -eu
 
-java --module-path mods \
+java -classpath . \
+     --module-path mods \
      --module com.myapp/com.myapp.Main
