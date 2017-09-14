@@ -26,3 +26,11 @@ To run that example just type:
 ```bash
 $ ./run.sh
 ```
+
+## Create jar files and run them
+
+This command will create two `.jar` files under the _libs/_ directory and run the module contained in the `my-first-app.jar` file.
+
+```bash
+$ ./create-and-run-jar.sh
+```
