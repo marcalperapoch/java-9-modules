@@ -10,10 +10,9 @@ import java.io.IOException;
 
 public class FromFileRepository implements Repository {
 
-    private final Map<String, String> data;
+    private final Map<String, String> data = new HashMap<>();
 
     public FromFileRepository(final String path) {
-        data = new HashMap<>();
         try (InputStream in = new FileInputStream(path)) {
             final Properties prop = new Properties();
             prop.load(in);
